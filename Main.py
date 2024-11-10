@@ -67,7 +67,7 @@ def handle_encrypt():
             key = int(entry_key.get())
             encrypt_image(input_image, output_image, key)
         except ValueError:
-            messagebox.showerror("Error", "Please enter a valid integer for the encryption key.")
+            messagebox.showerror("Error", "enter encryption key.")
 
 def handle_decrypt():
     input_image = choose_image()
@@ -79,9 +79,8 @@ def handle_decrypt():
             key = int(entry_key.get())
             decrypt_image(input_image, output_image, key)
         except ValueError:
-            messagebox.showerror("Error", "Please enter a valid integer for the decryption key.")
-
-# Setup the UI
+            messagebox.showerror("Error", "enter decryption key.")
+            
 window = tk.Tk()
 window.title("Image Encryption Tool")
 
